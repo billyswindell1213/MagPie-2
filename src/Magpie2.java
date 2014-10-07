@@ -28,8 +28,10 @@ public class Magpie2
 	 *            the user statement
 	 * @return a response based on the rules given
 	 */
-	public String getResponse(String statement)
-	{
+        public String getResponse (String statement)
+
+       {
+        statement = statement.trim();
 		String response = "";
 		if (statement.indexOf("no") >= 0)
 		{
@@ -42,9 +44,23 @@ public class Magpie2
 		{
 			response = "Tell me more about your family.";
 		}
-        else if (statement.indexOf("dog") >= 1
-                || statement.indexOf("cat") >= 1)
+        else if (statement.indexOf("dog") >= 0
+                || statement.indexOf("cat") >= 0)
+        {
             response = "Tell me more about your pets.";
+        }
+        else if (statement.indexOf("Mr.") >= 0)
+
+        {
+            response = "He sounds like a good teacher.";
+        }
+        else if (statement.indexOf("Mrs.") >= 0
+                || statement.indexOf("Miss.") >= 0
+                || statement.indexOf("Ms.") >= 0)
+        {
+            response = "She sounds like a good teacher.";
+        }
+
         else		{
 		}
 		return response;
