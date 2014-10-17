@@ -60,10 +60,28 @@ public class Magpie2
         {
             response = "She sounds like a good teacher.";
         }
+        else if (statement.length() < 1)
 
-        else		{
-		}
-		return response;
+
+           {
+               response = "Say something, please.";
+           }
+
+        else if (statement.indexOf("Why") >= 0)
+        {
+            response = "You're a philosopher.";
+        }
+        else if (statement.indexOf("tree") >=0)
+        {
+            response = "They are beautiful";
+        }
+           else if (statement.indexOf("car") >=0)
+        {
+            response = "I like chevys";
+        }
+
+
+           return response;
 	}
 
 	/**
